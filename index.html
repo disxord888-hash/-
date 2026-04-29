@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minecraft風作業台 レシピ作成</title>
+    <title>Minecraft風作業台 レシピ作成 (100個対応)</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="crafting-container">
-        <h1>Crafting</h1>
+        
+        <div class="header-nav">
+            <button id="prev-btn" title="前のレシピ">◀</button>
+            <h1>Recipe <span id="recipe-index">1</span>/100</h1>
+            <button id="next-btn" title="次のレシピ">▶</button>
+        </div>
         
         <div class="crafting-area">
             <!-- 3x3 Grid -->
@@ -36,9 +41,13 @@
         </div>
 
         <div class="controls">
-            <button id="export-btn">エクスポート</button>
-            <button id="import-btn">インポート</button>
+            <button id="export-btn">一括エクスポート</button>
+            <button id="import-btn">一括インポート</button>
             <input type="file" id="file-input" accept=".json" style="display: none;">
+        </div>
+        
+        <div class="manage-controls">
+            <button id="clear-btn">現在のレシピをクリア</button>
         </div>
     </div>
 
