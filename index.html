@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft風作業台 レシピ作成</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="crafting-container">
+        <h1>Crafting</h1>
+        
+        <div class="crafting-area">
+            <!-- 3x3 Grid -->
+            <div class="grid-container">
+                <input type="text" class="grid-item" id="slot-0" maxlength="20">
+                <input type="text" class="grid-item" id="slot-1" maxlength="20">
+                <input type="text" class="grid-item" id="slot-2" maxlength="20">
+                <input type="text" class="grid-item" id="slot-3" maxlength="20">
+                <input type="text" class="grid-item" id="slot-4" maxlength="20">
+                <input type="text" class="grid-item" id="slot-5" maxlength="20">
+                <input type="text" class="grid-item" id="slot-6" maxlength="20">
+                <input type="text" class="grid-item" id="slot-7" maxlength="20">
+                <input type="text" class="grid-item" id="slot-8" maxlength="20">
+            </div>
+
+            <!-- Arrow -->
+            <div class="arrow">➔</div>
+
+            <!-- Result -->
+            <div class="result-container">
+                <input type="text" class="result-item" id="result" placeholder="完成品" maxlength="20">
+                <input type="number" class="result-count" id="count" value="1" min="1" max="64">
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="export-btn">エクスポート</button>
+            <button id="import-btn">インポート</button>
+            <input type="file" id="file-input" accept=".json" style="display: none;">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
